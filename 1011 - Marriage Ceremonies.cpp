@@ -75,9 +75,9 @@ ll rec(int pos,int mask)
 
     for(int i=0; i<n; i++)
     {
-        if(!(mask & (1 << i)))
+        if(!(mask & (1 << i)))   // Checking that is it visited or not. If this bit is off [mask & (1<<i)] == 0.
         {
-            dp[pos][mask] = max(dp[pos][mask],ara[pos][i]+rec(pos+1,(mask | (1<<i))));
+            dp[pos][mask] = max(dp[pos][mask],ara[pos][i]+rec(pos+1,(mask | (1<<i))));  //  Making the bit visited.
         }
     }
 
