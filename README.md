@@ -1,1 +1,1 @@
-# Lightoj
+# Lightoj Solutions
