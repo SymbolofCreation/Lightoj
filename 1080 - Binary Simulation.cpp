@@ -76,6 +76,8 @@ void lazy_update(int at,int Left,int Right)
 
 void update(int at,int Left,int Right,int l,int r)
 {
+     if(lazy[at]!=-1)
+          lazy_update(at,Left,Right);
      if(Right<l || r<Left)
           return;
      if(l<=Left && Right<=r)
