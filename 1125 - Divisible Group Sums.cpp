@@ -75,7 +75,7 @@ ll rec(ll pos,ll rem,ll taken) {
 	if(dp[pos][rem][taken]!=-1)
 		return dp[pos][rem][taken];
 
-	ll ret = rec(pos+1,rem,taken)+rec(pos+1,((rem%mod+v[pos])%mod+mod)%mod,taken+1);   //negetive number can come. ((rem%mod)+(v[pos]%mod))%mod will not work 
+	ll ret = rec(pos+1,rem,taken)+rec(pos+1,((rem%mod+v[pos])%mod+mod)%mod,taken+1);   //negative number can come. ((rem%mod)+(v[pos]%mod))%mod will not work 
 	return dp[pos][rem][taken] = ret;
 }
 
